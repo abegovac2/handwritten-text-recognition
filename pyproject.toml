@@ -6,7 +6,7 @@ authors = ["John Smith <john@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.10"
 opencv-python = "4.9.0.80"
 kaldiio = "2.18.0"
 symspellpy = "6.7.7"
