@@ -5,7 +5,7 @@ description = ""
 authors = ["John Smith <john@example.com>"]
 readme = "README.md"
 packages = [
-    { include = "app", from="." },
+    { include = "handwritten-text-recognition", from="." },
 ]
 
 
