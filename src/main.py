@@ -63,10 +63,13 @@ if __name__ == "__main__":
     input_size = (1024, 128, 1)
     max_text_length = 256
 
-    charset_base = (" !\"#$%'(),-.0123456789:;?@\\]"
-                    "ABCDEFGHIJKLMNOPQRSTUVWXZ"
-                    "abcdefghijklmnopqrstuvwxyz"
-                    "ªºÀÁÉÚàáâãçèéêíóôõú")
+    charset_base = (
+        " !\"#$%'(),-.0123456789:;?@\\]"
+        "ABCDEFGHIJKLMNOPQRSTUVWXZ"
+        "abcdefghijklmnopqrstuvwxyz"
+        "ªºÀÁÉÚàáâãçèéêíóôõú"
+        "ČčĆćĐđŽžŠš"
+    )
 
     if args.transform:
         print(f"{args.source} dataset will be transformed...")

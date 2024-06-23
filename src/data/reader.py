@@ -221,6 +221,34 @@ class Dataset():
 
         return dataset
 
+    def _mine_logs(self):
+        """Mine log dataset reader"""
+
+        pt_path = os.path.join(self.source, "ml_line_data")
+
+        paths = {
+            "train": open(os.path.join(pt_path, "train.txt"), encoding="utf8")
+            .read()
+            .splitlines(),
+            "valid": open(os.path.join(pt_path, "val.txt"), encoding="utf8")
+            .read()
+            .splitlines(),
+            "test": open(os.path.join(pt_path, "test.txt"), encoding="utf8")
+            .read()
+            .splitlines(),
+        }
+
+        img_path = os.path.join(self.source, "line")
+        dataset = self._init_dataset()
+
+        for data_type, lines in paths.items():
+            for line in lines:
+                split = line.removesuffix("\n").split("|")
+                dataset[data_type]["dt"].append(os.path.join(img_path, f"{split[0]}"))
+                dataset[data_type]["gt"].append(split[-1])
+
+        return dataset
+
     def _iam(self):
         """IAM dataset reader"""
 
