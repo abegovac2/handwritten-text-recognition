@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "hand-written-text-recognition"
+version = "0.1.0"
+description = ""
+authors = [""]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+opencv-python = "4.9.0.80"
+kaldiio = "2.18.0"
+symspellpy = "6.7.7"
+tqdm = "4.66.1"
+tensorflow = "^2.16.1"
+editdistance = "^0.8.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
