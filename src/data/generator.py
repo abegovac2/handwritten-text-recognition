@@ -5,7 +5,7 @@ Image renderings and text are created on the fly each time.
 
 import h5py
 import numpy as np
-import data.preproc as pp
+import src.data.preproc as pp
 
 
 class DataGenerator():
