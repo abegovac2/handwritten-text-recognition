@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["John Smith <john@example.com>"]
 readme = "README.md"
+packages = [{include = "hand-written-text-recognition.py"}] 
 
 
 [tool.poetry.dependencies]
