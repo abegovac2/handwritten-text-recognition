@@ -101,10 +101,10 @@ def preprocess(img, input_size):
         background = int(u[np.argmax(np.bincount(i))])
         return img, background
 
+    bg = None
     if isinstance(img, str):
         img, bg = imread(img)
-
-    if isinstance(img, tuple):
+    elif isinstance(img, tuple):
         image, boundbox = img
         img, bg = imread(image)
 
@@ -116,6 +116,9 @@ def preprocess(img, input_size):
                 boundbox[i] = int(boundbox[i])
 
         img = np.asarray(img[boundbox[0]:boundbox[1], boundbox[2]:boundbox[3]], dtype=np.uint8)
+    else:
+        u, i = np.unique(np.array(img).flatten(), return_inverse=True)
+        bg = int(u[np.argmax(np.bincount(i))])
 
     wt, ht, _ = input_size
     h, w = np.asarray(img).shape
