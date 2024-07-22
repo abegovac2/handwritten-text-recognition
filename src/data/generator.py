@@ -5,7 +5,7 @@ Image renderings and text are created on the fly each time.
 
 import h5py
 import numpy as np
-import src.data.preproc as pp
+import hand_written_text_recognition.src.data.preproc as pp
 
 
 class DataGenerator():
