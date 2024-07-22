@@ -4,8 +4,6 @@ version = "0.3.1"
 description = ""
 authors = ["John Smith <john@example.com>"]
 readme = "README.md"
-
-[tool.poetry]
 package-mode = true
 
 [tool.poetry.dependencies]
