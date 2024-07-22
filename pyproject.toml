@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hand-written-text-recognition"
-version = "0.3.0"
+version = "0.3.1"
 description = ""
 authors = ["John Smith <john@example.com>"]
 readme = "README.md"
