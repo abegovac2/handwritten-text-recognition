@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "hand-written-text-recognition"
-version = "0.2.0"
+version = "0.3.0"
 description = ""
 authors = ["John Smith <john@example.com>"]
 readme = "README.md"
-packages = [{include = "src"}] 
+packages = [{include = "src"}, {include = "handwritten_text_recognition"}] 
 
 
 [tool.poetry.dependencies]
