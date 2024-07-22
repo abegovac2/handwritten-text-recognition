@@ -5,8 +5,8 @@ description = ""
 authors = ["John Smith <john@example.com>"]
 readme = "README.md"
 
-[tool.setuptools.packages.find]
-where = ["src/"]
+[tool.poetry]
+package-mode = true
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
